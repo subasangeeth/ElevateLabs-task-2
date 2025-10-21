@@ -1,7 +1,7 @@
 FROM openjdk:17
 
-COPY /target/*.jar app.jar
-
-CMD ["java","-jar","app.jar"]
-
 EXPOSE 8090
+
+COPY target/*.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
