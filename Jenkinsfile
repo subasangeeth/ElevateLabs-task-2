@@ -43,7 +43,8 @@ stages {
         steps {
                    
                     sh 'docker push subasangeeth/springapp:latest'
-                    sh 'docker run -p 8091:8090 -d  subasangeeth/springapp:latest'
+                    sh 'docker stop springapp | true'
+                    sh 'docker run -name "springapp" -p 8090:8090 -d  subasangeeth/springapp:latest'
         }
     }
 }
