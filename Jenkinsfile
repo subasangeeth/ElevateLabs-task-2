@@ -1,6 +1,5 @@
 pipeline {
 agent any
-
 environment {
     DOCKER_CREDENTIALS = credentials('docker-creds') // Docker credentials ID
 }
@@ -41,7 +40,7 @@ stages {
         }
     }
 
-    stage('Push to Docker Hub') {
+    stage('Push to Hub') {
         steps {
                    
                     sh 'docker push subasangeeth/springapp:latest'
