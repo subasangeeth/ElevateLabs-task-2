@@ -25,7 +25,10 @@ stages {
     stage('Test') {
         steps {
             dir('springapp-jenkins') {
+                sh 'mvn spring-boot:stop | true'
+                sh 'mvn spring-boot:start'
                 sh 'mvn clean install'
+                sh 'mvn spring-boot:stop'
             }
         }
     }
