@@ -16,12 +16,13 @@ public class WebApp {
 			 ModelAndView mv=new ModelAndView();
 			    
 			 
-			 	String version = "v2.5.1";
+			 	String version = "v3.1.1";
 			 	model.addAttribute("message", "Welcome to Spring Boot");
 		        model.addAttribute("version", version);
 		        mv.setViewName("index.html");
 		        return mv;
 		   
 	}
+
 
 }
