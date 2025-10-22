@@ -47,7 +47,6 @@ stages {
                    
                     sh 'docker push subasangeeth/springapp:latest'
                     sh 'docker run -p 8090:8090 -d  subasangeeth/springapp:latest'
-               
         }
     }
 }
