@@ -25,7 +25,7 @@ stages {
     stage('Test') {
         steps {
             dir('springapp-jenkins') {
-                
+                sh 'mvn spring-boot:stop | true'
                 sh 'mvn spring-boot:start'
                 sh 'mvn test'
                 sh 'mvn spring-boot:stop'
@@ -46,7 +46,7 @@ stages {
         steps {
                    
                     sh 'docker push subasangeeth/springapp:latest'
-                    sh 'docker run -p 8090:8090 -d  subasangeeth/springapp:latest'
+                    sh 'docker run -p 8091:8090 -d  subasangeeth/springapp:latest'
         }
     }
 }
