@@ -21,7 +21,7 @@ class VersionCheckTest {
 	        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
 	 
-	        String expectedVersion = "Version: v2.5.";
+	        String expectedVersion = "Version: v3.1.1";
 	        assertTrue(response.body().contains(expectedVersion),
 	                   "Website does not contain " + expectedVersion);
 	    }
