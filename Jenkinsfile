@@ -35,7 +35,6 @@ stages {
     stage('Docker Build') {
         steps {
              dir('springapp-jenkins') {
-     
               sh 'docker build -t subasangeeth/springapp:latest .'
               sh 'echo $DOCKER_CREDENTIALS_PSW | docker login -u $DOCKER_CREDENTIALS_USR --password-stdin'
              }
